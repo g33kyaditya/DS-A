@@ -19,6 +19,11 @@ class BST {
         void preOrder();
         void preOrderTraverse(Node *);
         Node * createNode(int data);
+        Node * search(int data);
+        void remove(Node * ptr, int data);
+        void noChild(Node * parent, int data);
+        void oneChild(Node * parent, int data);
+        void twoChild(Node * parent, int data);
     private:
         Node * root;
 };
