@@ -12,6 +12,7 @@ class Graph {
         void addEdge(int vert1, int vert2);
         void BFS(int vertex);
         void DFS(int vertex);
+        void DFSUtil(int vertex, bool visited[]);
     private:
         list<int> * adj;
         int V;

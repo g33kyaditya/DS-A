@@ -36,3 +36,22 @@ void Graph::BFS(int start) {
     }
 }
 
+void Graph::DFS(int start) {
+    bool * visited = new bool[V+1];
+    for (int i = 0; i <= V; i++)
+        visited[i] = false;
+
+    
+    DFSUtil(start, visited);
+}
+
+void Graph::DFSUtil(int start, bool * visited) {
+    cout << start << "  ";
+    visited[start] = true;
+    list<int>::iterator it;
+    for (it = adj[start].begin(); it != adj[start].end(); it++) {
+        if (!visited[*it]) {
+            DFSUtil(*it, visited);
+        }
+    }
+}

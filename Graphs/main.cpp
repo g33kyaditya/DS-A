@@ -10,4 +10,7 @@ int main() {
     graph.addEdge(2, 4);
 
     graph.BFS(2);
+    cout << "\n\nThe Depth First Search is ...\n";
+    graph.DFS(1);
+    cout << "\n";
 }
